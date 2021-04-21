@@ -1,3 +1,4 @@
+import 'package:DevQuiz/core/app_colors.dart';
 import 'package:DevQuiz/core/app_text_styles.dart';
 import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class ScoreCardWidget extends StatelessWidget {
         height: 136,
         decoration: BoxDecoration(
           border: Border.fromBorderSide(BorderSide(
-            color: Color(0xFFE1E1E5),
+            color: AppColors.border,
           )),
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),

@@ -12,7 +12,7 @@ class QuizCardWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.fromBorderSide(BorderSide(
-          color: Color(0xFFE1E1E5),
+          color: AppColors.border,
         )),
         borderRadius: BorderRadius.circular(10),
       ),
