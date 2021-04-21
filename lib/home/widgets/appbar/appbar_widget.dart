@@ -13,7 +13,7 @@ class AppbarWidget extends PreferredSize {
             child: Stack(
               children: [
                 Container(
-                  height: 165,
+                  height: 200,
                   padding: EdgeInsets.symmetric(horizontal: 20).copyWith(
                     bottom: 24,
                   ),
