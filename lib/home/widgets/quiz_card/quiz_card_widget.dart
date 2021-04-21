@@ -1,10 +1,22 @@
-import 'package:DevQuiz/core/app_colors.dart';
-import 'package:DevQuiz/core/app_images.dart';
-import 'package:DevQuiz/core/app_text_styles.dart';
-import 'package:flutter/cupertino.dart';
+import '../../../core/core.dart' show AppColors, AppTextStyles;
 import 'package:flutter/material.dart';
 
 class QuizCardWidget extends StatelessWidget {
+  final String title;
+  final String image;
+  final int completed;
+  final int total;
+
+  QuizCardWidget({
+    Key? key,
+    required this.title,
+    required this.image,
+    this.completed: 0,
+    this.total: 0,
+  }) : super(key: key);
+
+  double get _percentage => (completed / total);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,11 +35,11 @@ class QuizCardWidget extends StatelessWidget {
           Container(
             width: 40,
             height: 40,
-            child: Image.asset(AppImages.blocks),
+            child: Image.asset(image),
           ),
           SizedBox(height: 24),
           Text(
-            'Gerenciamento de estado',
+            title,
             style: AppTextStyles.heading15,
           ),
           SizedBox(height: 24),
@@ -36,14 +48,14 @@ class QuizCardWidget extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Text(
-                  '3 de 10',
+                  '$completed de $total',
                   style: AppTextStyles.body11,
                 ),
               ),
               Expanded(
                 flex: 3,
                 child: LinearProgressIndicator(
-                  value: 0.3,
+                  value: _percentage,
                   backgroundColor: AppColors.chartSecondary,
                   valueColor:
                       AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),

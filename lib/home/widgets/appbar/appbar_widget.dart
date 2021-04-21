@@ -1,12 +1,13 @@
-import 'package:DevQuiz/core/app_colors.dart';
-import 'package:DevQuiz/core/app_gradients.dart';
-import 'package:DevQuiz/core/app_images.dart';
-import 'package:DevQuiz/core/app_text_styles.dart';
-import 'package:DevQuiz/home/widgets/score_card/score_card_widget.dart';
+import '../../../core/core.dart'
+    show AppColors, AppGradients, AppImages, AppTextStyles;
+import '../score_card/score_card_widget.dart';
+import '../../../shared/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 class AppbarWidget extends PreferredSize {
-  AppbarWidget()
+  final UserModel? user;
+
+  AppbarWidget({this.user})
       : super(
           preferredSize: Size.fromHeight(250),
           child: Container(
@@ -30,7 +31,7 @@ class AppbarWidget extends PreferredSize {
                           style: AppTextStyles.title,
                           children: [
                             TextSpan(
-                              text: 'Lucas Oliveira',
+                              text: user?.name ?? 'Nome do usuário',
                               style: AppTextStyles.titleBold,
                             )
                           ],
@@ -49,7 +50,7 @@ class AppbarWidget extends PreferredSize {
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                             image: NetworkImage(
-                              AppImages.profileImage,
+                              user?.photoUrl ?? AppImages.profileImage,
                             ),
                           ),
                         ),

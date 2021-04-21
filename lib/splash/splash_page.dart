@@ -1,5 +1,4 @@
-import 'package:DevQuiz/core/app_gradients.dart';
-import 'package:DevQuiz/core/app_images.dart';
+import '../core/core.dart' show AppGradients, AppImages;
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {

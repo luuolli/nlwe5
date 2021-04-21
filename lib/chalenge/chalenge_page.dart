@@ -1,5 +1,5 @@
-import 'package:DevQuiz/chalenge/widgets/question_indicator/question_indicator_widget.dart';
-import 'package:DevQuiz/chalenge/widgets/quiz/quiz_widget.dart';
+import 'widgets/question_indicator/question_indicator_widget.dart';
+import 'widgets/quiz/quiz_widget.dart';
 import 'package:flutter/material.dart';
 
 class ChalengePage extends StatelessWidget {

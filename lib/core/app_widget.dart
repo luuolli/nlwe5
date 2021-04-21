@@ -1,4 +1,4 @@
-import 'package:DevQuiz/home/home_page.dart';
+import '../home/home_page.dart' show HomePage;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

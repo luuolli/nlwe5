@@ -9,4 +9,7 @@ class AppImages {
   static String get logo => "assets/images/logo.png";
   static String get profileImage =>
       "https://avatars.githubusercontent.com/u/22729600?v=4";
+
+  static String quizCardImageFromName(String image) =>
+      "assets/images/$image.png";
 }

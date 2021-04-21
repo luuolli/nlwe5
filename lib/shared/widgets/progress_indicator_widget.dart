@@ -1,4 +1,4 @@
-import 'package:DevQuiz/core/core.dart';
+import '../../core/core.dart' show AppColors;
 import 'package:flutter/material.dart';
 
 class ProgressIndicatorWidget extends StatelessWidget {
