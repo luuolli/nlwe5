@@ -20,6 +20,6 @@ void setChromeStyle() {
   ));
   SystemChrome.setEnabledSystemUIOverlays([
     SystemUiOverlay.top,
-    SystemUiOverlay.bottom,
+    // SystemUiOverlay.bottom,
   ]);
 }
